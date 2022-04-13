@@ -1,15 +1,114 @@
 {%- assign social = site.moving.social_links -%}
 
 <ul class="social-media-list">
-  {%- if social.dribbble -%}
+  {%- if social.twitter -%}
+  <li>
+    <a class="icon-link"
+      href="https://twitter.com/{{
+        social.twitter | cgi_escape | escape
+      }}"
+      target="_blank">
+      <svg class="svg-icon icon-twitter"><use xlink:href="#twitter"></use></svg>
+    </a>
+    <a class="black-link"
+      href="https://twitter.com/{{
+        social.twitter | cgi_escape | escape
+      }}"
+      target="_blank">[Twitter]
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if social.github -%}
+  <li>
+    <a class="icon-link"
+      href="https://github.com/{{
+        social.github | cgi_escape | escape
+      }}"
+      target="_blank">
+      <svg class="svg-icon icon-github"><use xlink:href="#github"></use></svg>
+    </a>
+    <a class="black-link"
+      href="https://github.com/{{
+        social.github | cgi_escape | escape
+      }}"
+      target="_blank">[Github]
+    </a>
+  </li>
+  {%- endif -%}
+  {%- for mst in social.mastodon -%}{%- if mst.username and
+  mst.instance -%}
+  <li>
+    <a class="icon-link"
+      rel="me"
+      href="https://{{ mst.instance | cgi_escape | escape }}/@{{
+        mst.username
+      }}"
+      target="_blank">
+      <svg class="svg-icon icon-mastodon"><use xlink:href="#mastodon"></use></svg>
+    </a>
+    <a class="black-link"
+      rel="me"
+      href="https://{{ mst.instance | cgi_escape | escape }}/@{{
+        mst.username
+      }}"
+      target="_blank">[Mastodon]
+    </a>
+  </li>
+  {%- endif -%}{%- endfor -%}
+  {%- if social.telegram -%}
+  <li>
+    <a class="icon-link"
+      href="https://t.me/{{ social.telegram | cgi_escape | escape }}"
+      target="_blank">
+      <svg class="svg-icon icon-telegram"><use xlink:href="#telegram"></use></svg>
+    </a>
+    <a class="black-link"
+      href="https://t.me/{{ social.telegram | cgi_escape | escape }}"
+      target="_blank">[Telegram]
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if social.reddit -%}
   <li>
     <a
       class="black-link"
-      href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}"
-      >[Dribbble]</a
+      href="https://reddit.com/user/{{ social.reddit | cgi_escape | escape }}"
     >
+      [Reddit]
+    </a>
   </li>
-  {%- endif -%} {%- if social.facebook -%}
+  {%- endif -%}
+  {%- if social.linkedin -%}
+  <li>
+    <a
+      class="icon-link"
+      href="https://www.linkedin.com/in/{{
+        social.linkedin | cgi_escape | escape
+      }}"
+      target="_blank">
+      <svg class="svg-icon icon-linkedin"><use xlink:href="#linkedin"></use></svg>
+    </a>
+    <a
+      class="black-link"
+      href="https://www.linkedin.com/in/{{
+        social.linkedin | cgi_escape | escape
+      }}"
+      target="_blank">[Linkedin]
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if social.rss -%}
+  <li>
+    <a class="icon-link"
+      href="{{ 'feed.xml' | relative_url }}"
+      target="_blank">
+      <svg class="svg-icon icon-rss" style="fill:orange"><use xlink:href="#rss"></use></svg>
+    <a class="black-link"
+      href="{{ 'feed.xml' | relative_url }}"
+      target="_blank">[RSS]</a>
+  </li>
+  {%- endif -%}
+  {%- if social.facebook -%}
   <li>
     <a
       class="black-link"
@@ -29,14 +128,6 @@
       >[Flickr]</a
     >
   </li>
-  {%- endif -%} {%- if social.github -%}
-  <li>
-    <a
-      class="black-link"
-      href="https://github.com/{{ social.github | cgi_escape | escape }}"
-    > [Github]</a
-    >
-  </li>
   {%- endif -%} {%- if social.instagram -%}
   <li>
     <a
@@ -47,16 +138,6 @@
       >[Instagram]</a
     >
   </li>
-  {%- endif -%} {%- if social.linkedin -%}
-  <li>
-    <a
-      class="black-link"
-      href="https://www.linkedin.com/in/{{
-        social.linkedin | cgi_escape | escape
-      }}"
-      >[Linkedin]</a
-    >
-  </li>
   {%- endif -%} {%- if social.pinterest -%}
   <li>
     <a
@@ -65,26 +146,6 @@
         social.pinterest | cgi_escape | escape
       }}"
       >[Pinterest]</a
-    >
-  </li>
-  {%- endif -%} {%- for mst in social.mastodon -%}{%- if mst.username and
-  mst.instance -%}
-  <li>
-    <a
-      class="black-link"
-      rel="me"
-      href="https://{{ mst.instance | cgi_escape | escape }}/@{{
-        mst.username
-      }}"
-      >[MST]</a
-    >
-  </li>
-  {%- endif -%}{%- endfor -%} {%- if social.twitter -%}
-  <li>
-    <a
-      class="black-link"
-      href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}"
-    > [Twitter]</a
     >
   </li>
   {%- endif -%} {%- if social.youtube -%}
@@ -104,37 +165,6 @@
       }}"
       >[YouTube Channel]</a
     >
-  </li>
-  {%- endif -%} {%- if social.telegram -%}
-  <li>
-    <a
-      class="black-link"
-      href="https://t.me/{{ social.telegram | cgi_escape | escape }}"
-    >
-      [Telegram]
-    </a>
-  </li>
-  {%- endif -%} {%- if social.microdotblog -%}
-  <li>
-    <a
-      class="black-link"
-      rel="me"
-      href="https://micro.blog/{{ social.microdotblog | cgi_escape | escape }}"
-      >[Microdotblog]</a
-    >
-  </li>
-  {%- endif -%} {%- if social.reddit -%}
-  <li>
-    <a
-      class="black-link"
-      href="https://reddit.com/user/{{ social.reddit | cgi_escape | escape }}"
-    >
-      [Reddit]
-    </a>
-  </li>
-  {%- endif -%} {%- if social.rss -%}
-  <li>
-    <a class="black-link" href="{{ 'feed.xml' | relative_url }}">[RSS]</a>
   </li>
   {%- endif -%}
 </ul>

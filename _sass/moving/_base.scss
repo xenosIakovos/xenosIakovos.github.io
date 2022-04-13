@@ -104,7 +104,6 @@ img {
   margin-top: 5px;
   padding: 2px 2px;
   border-radius: 3px;
-  background-color: lighten($grey-color-light, 3%);
   max-width: 100%;
   vertical-align: middle;
 }
@@ -125,7 +124,7 @@ figcaption {
   */
 ul,
 ol {
-  margin-left: $spacing-unit;
+  margin-left: $spacing-unit / 2;
 }
 
 li {
@@ -151,6 +150,13 @@ h6 {
 /**
   * Links
   */
+.icon-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
 a {
   color: $brand-color;
   text-decoration: none;
@@ -167,8 +173,8 @@ blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
+  margin: 16px 40px;
   @include relative-font-size(1);
-  letter-spacing: -1px;
 
 @media (max-width: 600px) {
   @include relative-font-size(0.8);
