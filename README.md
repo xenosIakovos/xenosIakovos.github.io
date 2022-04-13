@@ -1,8 +1,8 @@
 # arreando
 
-[![Gem Version](https://badge.fury.io/rb/arreando.svg)](https://badge.fury.io/rb/arreando) [![Build Status](https://travis-ci.com/jartigag/arreando.svg?branch=master)](https://travis-ci.org/jartigag/arreando) ![progress](https://img.shields.io/badge/progress-releasing-blue.svg) ![](https://img.shields.io/gem/dt/moving)
+[![Gem Version](https://badge.fury.io/rb/arreando.svg)](https://badge.fury.io/rb/arreando) [![Build Status](https://travis-ci.com/jartigag/arreando.svg?branch=master)](https://travis-ci.org/jartigag/arreando) ![progress](https://img.shields.io/badge/progress-releasing-blue.svg) ![](https://img.shields.io/gem/dt/arreando)
 
-Arreando is a clean and minimalist theme for [Jekyll](https://jekyllrb.com/). [[view demo]](https://jartigag.blog)
+Arreando is a clean and minimalist theme for [Jekyll](https://jekyllrb.com/). [[view demo]](https://jartigag.github.io/arreando)
 
 Inspired by Jekyll theme [Moving](https://github.com/huangyz0918/moving).
 
@@ -36,18 +36,18 @@ jekyll serve
 
 Once you successfully run the moving blog, you can modify the theme and add posts by yourself, have fun!
 
-### Add Moving to an Existing Blog
+### Add Arreando to an Existing Blog
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "moving"
+gem "arreando"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: moving
+theme: arreando
 ```
 
 And then execute:
@@ -56,7 +56,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install moving
+    $ gem install arreando
 
 ### Deploy to Github Pages
 
