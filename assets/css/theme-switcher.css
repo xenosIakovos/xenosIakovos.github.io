@@ -39,11 +39,11 @@ html[data-theme="dark"] {
   }
 }
 
-#dark-light-switch > svg {
+#theme-switch > svg {
   fill: var(--tx-color);
 }
 
-#dark-light-switch{
+#theme-switch{
   display: none;
   background: none;
   border: none;
@@ -58,7 +58,7 @@ html[data-theme="dark"] {
 }
 
 @media only screen{
-  #dark-light-switch{
+  #theme-switch{
     display: inline-block;
   }
 }
