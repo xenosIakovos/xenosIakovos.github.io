@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "moving"
-  spec.version       = "0.3.3"
-  spec.authors       = ["huangyz0918"]
-  spec.email         = ["huangyz0918@gmail.com"]
+  spec.version       = "0.1"
+  spec.authors       = ["jartigag"]
+  spec.email         = ["jartigag@protonmail.com"]
 
   spec.summary       = "A clean and minimalist theme for Jekyll"
-  spec.homepage      = "https://github.com/huangyz0918/moving"
+  spec.homepage      = "https://github.com/jartigag/arreando"
   spec.license       = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|

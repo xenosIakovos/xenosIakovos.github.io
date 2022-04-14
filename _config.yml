@@ -11,7 +11,7 @@ permalink: /:title/
 
 # Moving date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-moving:
+arreando:
   avatar_url: "/assets/images/profile.jpg"  # avatar in about page
   header_url: "/assets/images/header.jpg"   # header in home page
   about_you: a short description about you. # short description about you in about page
