@@ -317,6 +317,19 @@
   p {
     text-align: justify;
   }
+
+  img {
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.related {
+  padding-left: calc((#{$content-width} - #{$spacing-unit})/4);
+  @media screen and (min-width: $on-large) {
+    padding-left: calc((#{$content-width} - #{$spacing-unit} * 2)/4);
+  }
 }
 
 .social-media-list {

@@ -6,6 +6,13 @@ Arreando is a clean and minimalist theme for [Jekyll](https://jekyllrb.com/). [[
 
 Inspired by Jekyll theme [Moving](https://github.com/huangyz0918/moving).
 
+## To-Do List
+
+- [x] Replies to this post on Twitter/Mastodon
+- [x] Related posts
+- [ ] Theme-switcher
+- [ ] Tags
+
 ![](./github/banner.png)
 
 
