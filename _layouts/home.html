@@ -24,7 +24,7 @@ layout: default
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
       {% if forloop.first %}
-      <h2 id="{{ this_year }}-ref" class="post-year">{{this_year}}</h2>
+      <h2 id="{{ this_year }}-ref" class="post-category">{{this_year}}</h2>
       <ul>
       {% endif %}
 
@@ -43,7 +43,7 @@ layout: default
       {% else %}
           {% if this_year != next_year %}
           </ul>
-          <h2 id="{{ next_year }}-ref" class="post-year">{{next_year}}</h2>
+          <h2 id="{{ next_year }}-ref" class="post-category">{{next_year}}</h2>
           <ul>
           {% endif %}
       {% endif %}

@@ -1,0 +1,52 @@
+---
+layout: default
+title: Tags
+---
+<section class="tags-section">
+    <a href="#" style="text-decoration: none"><h1 class="post-title" style="color: #888">tags</h1></a>
+
+    {% assign tags_list = site.tags %}
+
+    {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+            <a class="post-tag black-link" href="#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+    {% else %}
+        {% for tag in tags_list %}
+            <a class="post-tag black-link" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% endfor %}
+    {% endif %}
+
+    {% assign tags_list = nil %}
+</section>
+
+<hr>
+
+<section class="post-list">
+    {% for tag in site.tags  %}
+    <h2 class="post-category" style="font-family: Arial" id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
+
+    <ul>
+        {% assign pages_list = tag[1] %}
+        {% for post in pages_list reversed %}
+            {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                    <li>
+                        <a class="black-link post-link-layout" href="{{ post.url | relative_url }}">
+                          {{ post.title | escape }}
+                        </a>
+                        {%- assign date_format = site.moving.date_format | default: "%b %-d, %Y" -%}
+                        <span class="post-meta">
+                          {{ post.date | date: date_format }}
+                        </span>
+                    </li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </ul>
+
+    <div class="breaker"></div>
+    {% endfor %}
+</section>

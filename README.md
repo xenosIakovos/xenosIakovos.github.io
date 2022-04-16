@@ -10,8 +10,8 @@ Inspired by Jekyll theme [Moving](https://github.com/huangyz0918/moving).
 
 - [x] Replies to this post on Twitter/Mastodon
 - [x] Related posts
+- [x] Tags
 - [ ] Theme-switcher
-- [ ] Tags
 
 ![](./github/banner.png)
 

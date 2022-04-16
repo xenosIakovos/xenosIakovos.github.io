@@ -212,7 +212,7 @@
   }
 }
 
-.post-year {
+.post-category {
   margin-top: 2rem;
   margin-bottom: 0.25rem;
   font-weight: 700;
@@ -326,10 +326,26 @@
 }
 
 .related {
+  margin-bottom: $spacing-unit;
   padding-left: calc((#{$content-width} - #{$spacing-unit})/4);
   @media screen and (min-width: $on-large) {
     padding-left: calc((#{$content-width} - #{$spacing-unit} * 2)/4);
   }
+}
+
+.post-tags {
+  text-align: center;
+}
+
+.post-tag {
+font-family: Arial;
+color: grey;
+margin-right: $spacing-unit / 5;
+}
+.post-tag::before { content: "#"; }
+
+.tags-section {
+  text-align: center;
 }
 
 .social-media-list {

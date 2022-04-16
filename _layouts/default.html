@@ -2,7 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
         {%- include head.html -%}
     <body>
-    <button name="switch" id="theme-switch" title="Toggle dark or light colorscheme">
+    <button name="theme-switch" id="theme-switch" title="Toggle dark or light colorscheme">
     <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="theme-icon" width="18" height="18" viewBox="0 0 1800 1800"><path d="M1463.034 1307.56c-36 6-73 9-110 9-371 0-672-301-672- 672 0-127 37-251 104-357-266 79-456 323-456 613 0 353 287 640 640 640 193 0 374-88 494-233zm203-85c-125 271-399 446-697 446-423 0-768-345-768-768 0-415 325-752 739-767 28-1 51 15 61 39 11  25 4 54-15 72-114 104-177 246-177 400 0 300 244 544 544 544 79 0 155-17 228-51 25-11 53-6 72 13s24 48 13 72z"/></svg>
     </button>
     <main class="page-content" aria-label="Content">
@@ -11,5 +11,82 @@
         </div>
     </main>
         {%- include footer.html -%}
+    <script
+        data-token="p.eyJ1IjogIjE4OTA0NmVkLWY1NjYtNGU5MS1hNmU3LWU0MDcxOGNkZmYwZCIsICJpZCI6ICJkNTY1ZTA1Ny03NmEzLTQyZjgtYjA5Yi0yZWQ5MzU3Y2JlMmIifQ.ULpoiOdG6SX-hDtFRx6Hvzoz9fzUJjzhNlpNZxd86qc"
+        data-source="blog_events_v0" src="https://cdn.tinybird.co/static/js/t.js">
+    </script>
+    <script>
+    function toggle() {
+        const body = document.body
+        const theme = localStorage.getItem('theme')
+        if (theme && theme === 'dark-mode') {
+          body.classList.remove('dark-mode')
+          body.classList.add('light-mode')
+          localStorage.setItem('theme', 'light-mode')
+        } else {
+          body.classList.add('dark-mode')
+          body.classList.remove('light-mode')
+          localStorage.setItem('theme', 'dark-mode')
+        }
+    }
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light-mode'
+      const body = document.body
+      const toggleButton = document.getElementById('theme-switch')
+      body.classList.add(theme)
+      if (theme && theme === 'light-mode') {
+        toggleButton.setAttribute('checked', true)
+      }
+      toggleButton.addEventListener('change', toggle)
+    })()
+    /*
+    function track() {
+        const url = '/.netlify/functions/track'
+        const currentDate = new Date(Date.now())
+        const theme = localStorage.getItem('theme')
+        const data = {
+            'event': 'load',
+            'timestamp': currentDate.toISOString(),
+            'language': navigator.language || 'unknown',
+            'languages': JSON.stringify(navigator.languages) || 'unknown',
+            'useragent': navigator.userAgent || 'unknown',
+            'referrer': document.referrer || 'unknown',
+            'href': location.href || 'unknown',
+            'origin': location.origin || 'unknown',
+            'screenx': window.screenX || 0,
+            'screeny': window.screenY || 0,
+            'theme': theme
+        }
+        fetch(url, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+    }
+    (function() {
+      window.onload = track
+    })()
+    */
+    </script>
+    <script>
+          const currentDate = new Date(Date.now())
+          const theme = localStorage.getItem('theme')
+          const data = {
+            'event': 'load',
+            'timestamp': currentDate.toISOString(),
+            'language': navigator.language || 'unknown',
+            'languages': JSON.stringify(navigator.languages) || 'unknown',
+            'useragent': navigator.userAgent || 'unknown',
+            'referrer': document.referrer || 'unknown',
+            'href': location.href || 'unknown',
+            'origin': location.origin || 'unknown',
+            'screenx': window.screenX || 0,
+            'screeny': window.screenY || 0,
+            'theme': theme
+          }
+        tinybird('pageload', data)
+    </script>
     </body>
 </html>

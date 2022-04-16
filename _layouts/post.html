@@ -69,5 +69,13 @@ layout: default
       {% include related.html %}
   {% endif %}
 
+  {% if site.show-tags %}
+      <div class="post-tags">
+          {% for tag in page.tags %}
+              <a class="post-tag black-link" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+          {% endfor %}
+      </div>
+  {% endif %}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
