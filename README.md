@@ -6,12 +6,16 @@ Arreando is a clean and minimalist theme for [Jekyll](https://jekyllrb.com/). [[
 
 Inspired by Jekyll theme [Moving](https://github.com/huangyz0918/moving).
 
-## To-Do List
+## Additional features
+
+These features were added to the original Moving theme:
 
 - [x] Replies to this post on Twitter/Mastodon
 - [x] Related posts
 - [x] Tags
-- [ ] Theme-switcher
+- [x] Theme-switcher
+
+They can be easily activated/deactivated.
 
 ![](./github/banner.png)
 
@@ -44,6 +48,8 @@ jekyll serve
 Once you successfully run the arreando blog, you can modify the theme and add posts by yourself, have fun!
 
 ### Add Arreando to an Existing Blog
+
+> [ ] To-Do: I have to publish the gem to make this work
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -87,12 +93,14 @@ favicon: "./favicon.ico"     # set the favicon of the site
 
 show_excerpts: false # set to true to show excerpts on the homepage
 permalink: /:title/
+related: true       # set to true to show related posts at the end of a post
+show-tags: true     # set to true to show tags at the end of a post
 
 # Moving date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 arreando:
   avatar_url: "/assets/images/profile.jpg"  # avatar in about page
-  header_url: "/assets/images/header.jpg"   # header in home page
+                                            # header image is in /assets/css/header.jpg
   about_you: a short description about you. # short description about you in about page
   date_format: "%b %d"                      # date format of posts in home page
   back_to: "blog"                           # In the post page, you have a back button above the title, you can custom the text by yourself.
@@ -100,8 +108,6 @@ arreando:
 # Build settings
 theme: arreando # note, please use remote_theme: jartigag/arreando if you want to publish to Github Pages.
 ```
-
-
 
 ## Contributing
 

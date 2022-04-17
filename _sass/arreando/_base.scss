@@ -27,8 +27,8 @@ figure {
 body {
   font: $base-font-weight #{$small-font-size}/#{$small-line-height}
     $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--tx-color);
+  background-color: var(--bg-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -158,7 +158,7 @@ h6 {
   }
 }
 a {
-  color: $brand-color;
+  color: var(--link-color);
   text-decoration: none;
 
   &:hover {
@@ -170,8 +170,8 @@ a {
   * Blockquotes
   */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--detail-color);
+  border-left: 4px solid var(--detail-color);
   padding-left: $spacing-unit / 2;
   margin: 16px 40px;
   @include relative-font-size(1);
@@ -191,9 +191,8 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9);
-  border: 1px solid darken($grey-color-light, 3%);
   border-radius: 3px;
-  background-color: lighten($grey-color-light, 3%);
+  background-color: var(--highlight-color);
 }
 
 code {
@@ -268,7 +267,7 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: var(--tx-color);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
   tr {

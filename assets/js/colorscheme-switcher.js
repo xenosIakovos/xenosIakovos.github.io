@@ -1,6 +1,6 @@
 // original author: ekaitz_zarraga (https://ekaitz.elenq.tech/dark-light-theme.html)
 
-var theme_switch = document.getElementById("dark-light-switch");
+var theme_switch = document.getElementById("theme-switch");
 var body = document.getElementsByTagName("body")[0];
 
 function init( color ){
