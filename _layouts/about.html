@@ -7,7 +7,7 @@ layout: default
     <title>{{ site.author }}</title>
   </head>
   <div class="post-back">
-    <a class="black-link" href="{{ site.url | relative_url }}"> ← {{ site.moving.back_to }} </a>
+    <a class="black-link" href="{{ site.url | relative_url }}"> ← {{ site.arreando.back_to }} </a>
   </div>
   <div class="about-header">
     {%- if site.arreando.avatar_url -%}
@@ -17,9 +17,9 @@ layout: default
       <div class="about-your-name">
         {{ site.author | escape }}
       </div>
-      {%- endif -%} {%- if site.moving.about_you -%}
+      {%- endif -%} {%- if site.arreando.about_you -%}
       <p class="about-description">
-        {{ site.moving.about_you | escape }}
+        {{ site.arreando.about_you | escape }}
       </p>
       {%- endif -%} {%- include social.html -%}
     </div>

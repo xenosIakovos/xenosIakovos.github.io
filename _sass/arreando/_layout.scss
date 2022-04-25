@@ -125,21 +125,25 @@
 
 .contact-list,
 .social-media-list {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  @include relative-font-size(1);
+  li {
+    float: left;
+    a {
+      padding-right: $spacing-unit / 5;
+    }
+  }
   list-style: none;
   margin-left: 0;
 }
 
-.social-media-list {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
+.contact-list {
+  display: flex;
 }
 
 .social-media-list > li {
   flex-grow: 1;
-}
-
-.contact-list > li:last-child {
-  margin-top: 20px;
 }
 
 /**
@@ -347,18 +351,6 @@
   text-align: center;
 }
 
-.social-media-list {
-  margin-top: -1rem;
-  display: flex;
-  @include relative-font-size(1);
-  li {
-    float: left;
-    a {
-      padding-right: $spacing-unit / 5;
-    }
-  }
-}
-
 /**
  * Grid helpers
  */
@@ -383,11 +375,14 @@
       padding: 1px;
       width: 10rem;
       height: 10rem;
-      margin: 0 2rem 0 0;
+      margin: 0 5rem 0 5rem;
     }
 
     .about-info {
-      align-self: center;
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
       .about-your-name {
         display: flex;
