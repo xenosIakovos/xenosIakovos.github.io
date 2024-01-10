@@ -1,7 +1,7 @@
-title: Arreando                            # The title of the blog
-author: Your Name                          # Your name
-email: your-email@domain.com               # your email shown in the footer
-url: https://jartigag.github.io/arreando   # this is your site's root address.
+title: Xenos' Blog                            # The title of the blog
+author: xenosiakovos                         # Your name
+email: xenosiakovos2003@gmail.com               # your email shown in the footer
+url: https://xenosiakovos.github.io   # this is your site's root address.
 description: > # this means to ignore newlines until "show_excerpts:"
   A clean and minimalist theme for Jekyll.
 favicon: "./favicon.ico"     # set the favicon of the site
@@ -22,12 +22,12 @@ arreando:
 
   # generate social links in about page.
   social_links:
-    twitter: jartigag
-    github:  jartigag
+    # twitter: jartigag
+    github:  xenosiakovos
     rss: RSS
     # facebook:
     # flickr:
-    # instagram:
+     instagram: xenosiakovos
     # linkedin:
     # pinterest:
     # youtube:
